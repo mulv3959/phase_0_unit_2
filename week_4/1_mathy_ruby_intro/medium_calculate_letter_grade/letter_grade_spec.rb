@@ -1,5 +1,31 @@
 require_relative 'my_solution'
 
+def total(array)
+  sum = 0
+  i = 0
+  while array[i] 
+  sum += array[i]
+  i += 1
+  end
+  return sum
+end
+
+def get_grade(array)
+  average = total(array) / array.length
+  if average >= 90
+    return "A"
+  elsif average >=80
+    return "B"
+  elsif average >=70
+    return "C"
+  elsif average >= 60
+    return "D"
+  else 
+    return "F"
+  end
+end
+    
+
 describe 'get_grade' do
   let(:arrayA) { [100,90,100,99,99]}
   let(:arrayB) { [80,90,80,89,98]}
