@@ -1,5 +1,29 @@
 require_relative "my_solution"
 
+
+
+class Array 
+
+
+  def  pad (new_length, new_element = nil)
+    array = self.map {|x| x }
+      while array.length < new_length
+        array.push(new_element)
+      end
+    return array
+  end
+
+  def pad!(new_length, new_element = nil)
+    while self.length < new_length
+      self.push(new_element)
+    end
+  return self
+  end
+end
+
+
+
+
 describe Array do
   let!(:empty_array)  { [] }
   let!(:array)        { [1,2,3] }
