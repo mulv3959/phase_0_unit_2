@@ -70,7 +70,14 @@ end
 puts my_hash_deletion_method(my_family_pets_ages, "George")
 # Identify and describe the ruby method you implemented. 
 # 
-#
+#def my_array_deletion_method(source, thing_to_delete)
+ # source.map do |element| 
+  #  if element.include?(thing_to_delete) 
+   # 	   source.delete(element)
+    #     return source.inspect
+     #    end
+ # end
+#end
 #
 
 
