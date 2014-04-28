@@ -2,6 +2,20 @@ require_relative "my_solution"
 #=> Make sure you change this to the name of your code file! Save that file
 # into this repo. 
 
+def separate_comma(integer)
+   string = []
+   integer = integer.to_s.reverse.split(//).to_a.each_slice(3){|a| string << a}
+   .to_a.each_slice(3){|a| string << a}
+   string.map{|i| 
+      if i.length == 3
+            i.push(',')
+      end}
+   solution = string.join.reverse
+      if solution.start_with?(',')
+        solution[0] = ''
+      end
+   puts solution.inspect
+end
 
 def random_num(min, max)
    rand(max - min + 1) + min
