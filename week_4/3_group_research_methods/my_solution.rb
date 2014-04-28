@@ -6,8 +6,11 @@ my_family_pets_ages = {"Evi" => 6, "Hoobie" => 3, "George" => 12, "Bogart" => 4,
 
 # Person 1's solution
 def my_array_finding_method(source, thing_to_find)
-  # Your code here!
+  source.select {|element| element.to_s.include?(thing_to_find)}
 end
+
+puts my_array_finding_method(i_want_pets, "t")
+
 
 def my_hash_finding_method(source, thing_to_find)
   # Your code here!
@@ -45,18 +48,26 @@ end
 # Identify and describe the ruby method you implemented. 
 # 
 #
-#
+#i_want_pets = ["I", "want", 3, "pets", "but", "I", "only", "have", 2]
 
 
-# Person 4
+
+# Person 4 (Johnny Mulvahill)
 def my_array_deletion_method(source, thing_to_delete)
-  #Your code here!
+  source.each do |element|
+  	if element.include?(thing_to_delete) 
+  		source.delete(element)
+  	end
+  end
 end
+
+puts my_array_deletion_method(i_want_pets, "a")
 
 def my_hash_deletion_method(source, thing_to_delete)
-  #Your code here!
+  source.delete_if {|key,value| key == thing_to_delete}
 end
 
+puts my_hash_deletion_method(my_family_pets_ages, "George")
 # Identify and describe the ruby method you implemented. 
 # 
 #
