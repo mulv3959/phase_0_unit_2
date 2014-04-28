@@ -15,6 +15,7 @@
 # Well first I believe we need to turn it into a string.
 # After it is in a string I have to find a pattern that allows me to tell the computer 
 # to insert a comma in the correct spot (maybe using the split method?)
+<<<<<<< HEAD
 # first idea.... use to_s...then .split(//) which splits each letter or number in this case into a separate element in an array..
 #...then idk if this is possible but if the index # % 3 = 1 insert (,) ...just kidding more i think about it is not possible this way
 # im close though...
@@ -30,6 +31,8 @@
 #7. join back into one string
 #8. reverse the string and return it
 
+=======
+>>>>>>> FETCH_HEAD
 
 
 # 2. Initial Solution
@@ -55,6 +58,7 @@ end
 
 
 # 4. Reflection 
+<<<<<<< HEAD
 # this took me a long time but I definately learned a lot. 
 # I was struggling to see how these challenges related to my math skills
 # but I am starting to see the connection now. It is really about breaking 
@@ -73,3 +77,5 @@ end
 # it was a huge help because it allowed me to tackle small challenges
 # step by step. Before I was too focused on the end result we were looking for instead of the process
 # of how to get there.
+=======
+>>>>>>> FETCH_HEAD
