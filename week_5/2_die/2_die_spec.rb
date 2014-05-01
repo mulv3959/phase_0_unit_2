@@ -1,5 +1,24 @@
 require_relative 'my_solution'
 
+
+class Die
+  def initialize(labels)
+    unless labels.length > 0
+      raise ArgumentError.new("Need more sides")
+    end
+    @labels = labels
+  end
+
+  def sides
+    return @labels.length
+  end
+
+  def roll
+    @labels.sample
+  end
+end
+
+
 describe Die do
   describe '#initialize' do
     it 'expects a single argument' do
