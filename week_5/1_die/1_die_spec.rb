@@ -1,5 +1,22 @@
 require_relative 'my_solution'
 
+
+class Die
+  @@num_of_sides = 0
+  def initialize(sides)
+    @sides !< 1
+  end
+  
+  def sides
+    
+  end
+  
+  def roll
+    # code goes here
+  end
+end
+
+
 describe Die do
   describe '#initialize' do
     it 'expects a single argument' do

@@ -1,8 +1,8 @@
 # U2.W5: The Bakery Challenge (GPS 2.1)
 
 # Your Names
-# 1)
-# 2)
+# 1) Johnny Mulvahill
+# 2) Simon Gondeck
 
  # This is the file you should end up editing. 
  
@@ -27,24 +27,15 @@ def bakery_num(num_of_people, fav_food)
   if num_of_people % fav_food_qty == 0
     num_of_food = num_of_people / fav_food_qty
     return "You need to make #{num_of_food} #{fav_food}(s)."
-  else num_of_people % fav_food_qty != 0
-    while num_of_people > 0
-    if num_of_people / my_list["pie"] > 0
-    pie_qty = num_of_people / my_list["pie"]
-    num_of_people = num_of_people % my_list["pie"]
-    elsif num_of_people / my_list["cake"] > 0
-    cake_qty = num_of_people / my_list["cake"]
-    num_of_people = num_of_people % my_list["cake"]
-    else
-    cookie_qty = num_of_people
-    num_of_people = 0
-    end
-    end
-    return "You need to make #{pie_qty} pie(s), #{cake_qty} cake(s), and #{cookie_qty} cookie(s)."
+  else 
+    num_of_food = num_of_people / fav_food_qty
+    remaining_people = num_of_people % fav_food_qty
+    return "You need to make #{num_of_food} #{fav_food}(s) and #{remaining_people} cookie(s)."
     end
   end
 end
  
+
 
 #-----------------------------------------------------------------------------------------------------
 #DRIVER CODE-- DO NOT MODIFY ANYTHING BELOW THIS LINE (except in the section at the bottom)
