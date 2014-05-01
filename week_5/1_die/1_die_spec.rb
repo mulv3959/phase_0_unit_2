@@ -2,17 +2,19 @@ require_relative 'my_solution'
 
 
 class Die
-  @@num_of_sides = 0
   def initialize(sides)
-    @sides !< 1
+    unless sides > 1
+      raise ArgumentError.new("Need more sides")
+    end
+    @sides = sides
   end
-  
   def sides
-    
+    return @sides
   end
   
   def roll
-    # code goes here
+    number = 1 + rand(@sides)
+    return number
   end
 end
 
