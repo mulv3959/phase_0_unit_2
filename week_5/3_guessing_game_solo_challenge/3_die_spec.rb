@@ -1,5 +1,32 @@
 require_relative 'my_solution'
 
+class GuessingGame
+
+  def initialize(answer)
+    @answer = answer
+  end
+
+  def guess(guess)
+    @guess = guess
+    if guess > @answer
+      return :high
+    elsif guess < @answer
+      return :low
+    else
+      return :correct    
+    end
+  end
+
+  def solved?
+    if @guess == @answer
+      return true
+    else 
+      return false
+    end
+  end
+end
+
+
 describe GuessingGame do
   let(:game) { GuessingGame.new(10) }
   
