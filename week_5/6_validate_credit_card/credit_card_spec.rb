@@ -1,5 +1,34 @@
 require_relative 'my_solution'
 
+
+class CreditCard
+
+  def initialize(number)
+    @number = number
+    @card_number = @number.to_s.split(//).reverse
+    unless @card_number.size == 16
+      raise ArgumentError.new("A credit card must have 16 digits")
+    end
+  end
+
+  def check_card
+    num = @card_number.collect.with_index{|digit,i| 
+      if (i+1) % 2 == 0
+        digit.to_i + digit.to_i
+      else digit
+      end}.join.split(//)
+    sum = num.map(&:to_i).reduce(:+)
+    if sum % 10 == 0
+      return true
+    else
+      return false
+    end
+      print sum
+  end
+
+end
+
+
 describe CreditCard do
   describe '#initialize' do
     it 'Expects a single argument for the card' do
