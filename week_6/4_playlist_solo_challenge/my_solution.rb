@@ -1,7 +1,7 @@
 # U2.W6: Create a Playlist from Driver Code
 
 
-# I worked on this challenge [by myself, with: ].
+# I worked on this challenge [ with: Simon Gondeck ].
 
 
 # Pseudocode
@@ -10,7 +10,47 @@
 
 # Initial Solution
 
+class Playlist
 
+	def initialize(*songs)
+		@playlist = songs
+		
+	end
+
+	def add(*song)
+		@playlist += song
+	end
+
+	def num_of_tracks
+		@playlist.length
+	end
+
+	def remove(song)
+	end
+
+	def includes?(song)
+		@playlist.include?(song)
+	end
+
+	def play_all
+	end
+
+	def display
+	end
+
+
+end
+
+class Song
+	def initialize(song, artist)
+		@song = song
+		@artist = artist
+	end
+
+	def play
+		"Now playing #{@song} by #{@artist}."
+	end
+end
 
 
 # Refactored Solution
